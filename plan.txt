@@ -1,0 +1,17 @@
+# Plan
+
+## To Do
+- Set up the basic Node.js application.
+- Create SQLite database schema for users.
+- Implement user registration and login functionality.
+- Implement profile picture upload functionality.
+- Create HTML templates for registration, login, and home pages.
+- Add CSS for styling.
+
+## Done
+- Created `.gitignore` file.
+- Created `README.md` file.
+- Set up the basic Node.js application.
+- Created SQLite database schema for users with a default profile picture URL.
+- Implemented user registration and login functionality.
+- Implemented profile picture upload functionality.
