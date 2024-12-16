@@ -105,6 +105,17 @@ app.get('/logout', (req, res) => {
     });
 });
 
+app.get('/account-settings', (req, res) => {
+        if (!req.session.userId) {
+            return res.redirect('/login');
+        }
+        db.get("SELECT * FROM users WHERE id = ?", [req.session.userId], (err, row) => {
+            if (err || !row) {
+                return res.status(500).send('Error retrieving user data');
+            }
+            res.render('account-settings', { user: row });
+        });
+    });
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });

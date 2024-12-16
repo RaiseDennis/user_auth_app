@@ -8,10 +8,16 @@
 </head>
 <body>
     <nav>
-        <div class="profile-picture">
-            <img src="<%= user.profile_picture %>" alt="Profile Picture">
-        </div>
-        <a href="/logout">Logout</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <img src="<%= user.profile_picture %>" alt="Profile Picture" width="30" height="30">
+                <div class="dropdown-content">
+                    <a href="/account-settings">Account Settings</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            </li>
+        </ul>
     </nav>
     <div class="container">
         <h2>Welcome, <%= user.username %>!</h2>
